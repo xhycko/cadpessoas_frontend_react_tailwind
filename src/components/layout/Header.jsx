@@ -108,7 +108,7 @@ const Header = () => {
             id="mobile-menu-title"
             className="text-lg sm:text-xl font-semibold text-secondary-900 dark:text-white"
           >
-            Menu de Navegação
+            Menu
           </h2>
           <button
             onClick={handleClose}
