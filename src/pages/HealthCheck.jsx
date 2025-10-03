@@ -94,7 +94,7 @@ const HealthCheck = () => {
     <div className="container mx-auto px-4 py-4">
       <PageHeader
         title="Status da API"
-        subtitle="Monitoramento da API REST"
+        subtitle="Monitoramento da API"
         icon={SignalIcon}
         actions={actions}
       />
@@ -232,9 +232,7 @@ const HealthCheck = () => {
       )}
 
       <Alert variant="info" title="Monitoramento Automático">
-        Esta página verifica automaticamente o status da API a cada 30 segundos
-        quando o auto-refresh está ativado. Use o botão "Atualizar" para
-        verificar manualmente.
+        Verifica status da API a cada 30 segundos quando auto-refresh está ativo.
       </Alert>
     </div>
   );

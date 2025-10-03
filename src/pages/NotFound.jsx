@@ -11,11 +11,11 @@ const NotFound = () => (
         
         <div className="text-6xl font-bold text-primary-400 mb-4">404</div>
         <h1 className="text-2xl font-bold text-white mb-4">Página não encontrada</h1>
-        <p className="text-gray-300 mb-8">A página que você está procurando não existe ou foi movida.</p>
+        <p className="text-gray-300 mb-8">A página não existe ou foi movida.</p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/" className="btn-primary">
-            <HomeIcon className="h-4 w-4 mr-2" />Ir para Início
+            <HomeIcon className="h-4 w-4 mr-2" />Início
           </Link>
           <button onClick={() => window.history.back()} className="btn-secondary">
             <ArrowLeftIcon className="h-4 w-4 mr-2" />Voltar

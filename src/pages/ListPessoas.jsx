@@ -57,15 +57,15 @@ const ListPessoas = () => {
       <ArrowPathIcon className="h-4 w-4 mr-2" />Atualizar
     </button>,
     <Link key="add" to="/pessoas/novo" className="btn-primary">
-      <PlusIcon className="h-4 w-4 mr-2" />Adicionar Pessoa
+      <PlusIcon className="h-4 w-4 mr-2" />Adicionar
     </Link>
   ];
 
   return (
     <div className="container mx-auto px-4 py-6">
       <PageHeader 
-        title="Pessoas Cadastradas" 
-        subtitle={pessoas.length === 0 ? 'Nenhuma pessoa cadastrada' : `${pessoas.length} pessoa${pessoas.length !== 1 ? 's' : ''} encontrada${pessoas.length !== 1 ? 's' : ''}`}
+        title="Pessoas" 
+        subtitle={pessoas.length === 0 ? 'Nenhuma pessoa cadastrada' : `${pessoas.length} pessoa${pessoas.length !== 1 ? 's' : ''}`}
         icon={UsersIcon}
         actions={actions}
       />
@@ -76,10 +76,10 @@ const ListPessoas = () => {
         <EmptyState 
           icon={UsersIcon}
           title="Nenhuma pessoa cadastrada"
-          description="Comece adicionando a primeira pessoa ao sistema."
+          description="Comece adicionando a primeira pessoa"
           action={
             <Link to="/pessoas/novo" className="btn-primary text-base px-6 py-3">
-              <PlusIcon className="h-5 w-5 mr-2" />Adicionar Primeira Pessoa
+              <PlusIcon className="h-5 w-5 mr-2" />Adicionar Pessoa
             </Link>
           }
         />
@@ -96,7 +96,7 @@ const ListPessoas = () => {
         onHide={() => setDeleteDialog({ show: false, pessoa: null })}
         onConfirm={handleDeleteConfirm}
         title="Confirmar Exclusão"
-        message={deleteDialog.pessoa ? `Tem certeza que deseja excluir "${deleteDialog.pessoa.nome}"? Esta ação não pode ser desfeita.` : ''}
+        message={deleteDialog.pessoa ? `Excluir "${deleteDialog.pessoa.nome}"? Esta ação não pode ser desfeita.` : ''}
         confirmText="Excluir"
         cancelText="Cancelar"
         variant="danger"
