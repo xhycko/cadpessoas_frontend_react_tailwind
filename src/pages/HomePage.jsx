@@ -10,21 +10,21 @@ import { Card } from "../components/ui";
 const features = [
   {
     icon: UsersIcon,
-    title: "Pessoas",
+    title: "Listar Pessoas",
     description: "Visualize e gerencie cadastros",
     link: "/pessoas",
     color: "text-blue-600 dark:text-blue-400",
   },
   {
     icon: PlusIcon,
-    title: "Adicionar",
+    title: "Adicionar Pessoa",
     description: "Cadastre com validação",
     link: "/pessoas/novo",
     color: "text-green-600 dark:text-green-400",
   },
   {
     icon: SignalIcon,
-    title: "Status API",
+    title: "Status da API",
     description: "Monitore conectividade",
     link: "/health",
     color: "text-red-600 dark:text-red-400",

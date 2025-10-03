@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto usa inputs HTML padrão com classes Tailwind
+
+/*
 import React, { forwardRef } from 'react';
 import { cn } from '../../utils/design-system';
 
@@ -94,3 +98,4 @@ const TouchInput = forwardRef(({
 TouchInput.displayName = 'TouchInput';
 
 export default TouchInput;
+*/

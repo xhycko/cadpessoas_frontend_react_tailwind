@@ -29,7 +29,7 @@ const Header = () => {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
+
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -39,15 +39,16 @@ const Header = () => {
 
   const navItems = [
     { path: "/", label: "Início", icon: HomeIcon },
-    { path: "/pessoas", label: "Pessoas", icon: UsersIcon },
-    { path: "/pessoas/novo", label: "Adicionar", icon: PlusIcon },
-    { path: "/health", label: "Status API", icon: SignalIcon },
+    { path: "/pessoas", label: "Listar Pessoas", icon: UsersIcon },
+    { path: "/pessoas/novo", label: "Adicionar Pessoa", icon: PlusIcon },
+    { path: "/health", label: "Status da API", icon: SignalIcon },
   ];
 
   return (
     <>
       {/* Header fixo com melhor responsividade */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-secondary-800/95 backdrop-blur-md shadow-sm border-b border-secondary-200 dark:border-secondary-700 transition-colors duration-300">
+
         <div className="container-app">
           <div className="flex items-center justify-between h-14 sm:h-16">
             {/* Logo/Brand otimizado para mobile */}
@@ -65,7 +66,7 @@ const Header = () => {
             <div className="flex items-center space-x-2">
               {/* Theme toggle */}
               <ThemeToggle variant="button" className="hidden sm:block" />
-              
+
               {/* Menu hamburger com área de toque maior */}
               <button
                 onClick={handleToggle}
@@ -95,16 +96,15 @@ const Header = () => {
 
       {/* Menu mobile slide-in otimizado */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-full max-w-sm bg-white dark:bg-secondary-800 shadow-2xl transform transition-transform duration-300 ease-smooth ${
-          showMobileMenu ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 z-50 h-full w-full max-w-sm bg-white dark:bg-secondary-800 shadow-2xl border-l-2 border-secondary-200 dark:border-secondary-700 transform transition-transform duration-300 ease-smooth ${showMobileMenu ? "translate-x-0" : "translate-x-full"
+          }`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="mobile-menu-title"
       >
         {/* Header do menu com melhor espaçamento */}
-        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-secondary-200 dark:border-secondary-700">
-          <h2 
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b-2 border-secondary-200 dark:border-secondary-700">
+          <h2
             id="mobile-menu-title"
             className="text-lg sm:text-xl font-semibold text-secondary-900 dark:text-white"
           >
@@ -112,7 +112,7 @@ const Header = () => {
           </h2>
           <button
             onClick={handleClose}
-            className="p-2 rounded-lg text-secondary-600 dark:text-secondary-300 hover:text-secondary-900 dark:hover:text-white hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-200 focus-ring"
+            className="p-2 rounded-lg text-secondary-600 dark:text-secondary-300 hover:text-secondary-900 dark:hover:text-white hover:bg-secondary-100 dark:hover:bg-secondary-700 transition-all duration-100 focus-ring"
             aria-label="Fechar menu"
           >
             <XMarkIcon className="h-6 w-6" />
@@ -127,11 +127,10 @@ const Header = () => {
                 <Link
                   to={path}
                   onClick={handleClose}
-                  className={`flex items-center space-x-3 px-4 py-4 rounded-xl transition-all duration-200 touch-manipulation ${
-                    isActive(path)
-                      ? "bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 shadow-sm"
-                      : "text-secondary-700 dark:text-secondary-300 hover:bg-secondary-100 dark:hover:bg-secondary-700 hover:text-secondary-900 dark:hover:text-white active:bg-secondary-200 dark:active:bg-secondary-600"
-                  }`}
+                  className={`flex items-center space-x-3 px-4 py-4 rounded-xl transition-all duration-200 touch-manipulation ${isActive(path)
+                    ? "bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 shadow-sm"
+                    : "text-secondary-700 dark:text-secondary-300 hover:bg-secondary-100 dark:hover:bg-secondary-700 hover:text-secondary-900 dark:hover:text-white active:bg-secondary-200 dark:active:bg-secondary-600"
+                    }`}
                   aria-current={isActive(path) ? "page" : undefined}
                 >
                   <Icon className="h-5 w-5 flex-shrink-0" />
@@ -143,12 +142,12 @@ const Header = () => {
         </nav>
 
         {/* Footer do menu com informações adicionais */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 border-t border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900">
+        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 border-t-2 border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900">
           {/* Theme toggle para mobile */}
           <div className="flex justify-center mb-4 sm:hidden">
             <ThemeToggle variant="dropdown-with-text" />
           </div>
-          
+
           <div className="text-center">
             <p className="text-sm text-secondary-600 dark:text-secondary-400">
               CRUD de Pessoas

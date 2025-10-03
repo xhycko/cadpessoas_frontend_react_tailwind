@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto não usa transições de página customizadas
+
+/*
 import React, { useEffect, useState } from 'react';
 import { cn } from '../../utils/design-system';
 
@@ -181,3 +185,4 @@ export const MicroInteraction = ({
 };
 
 export default PageTransition;
+*/

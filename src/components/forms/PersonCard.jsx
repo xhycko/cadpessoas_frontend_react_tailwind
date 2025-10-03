@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto usa PersonTable que já tem versão mobile com cards
+
+/*
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -139,3 +143,4 @@ const PersonCard = ({ pessoa, onDelete, loading = false }) => {
 };
 
 export default PersonCard;
+*/

@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto usa classes Tailwind diretamente para tipografia
+
+/*
 import React from 'react';
 import { cn } from '../../utils/design-system';
 
@@ -112,3 +116,4 @@ ResponsiveText.Info = (props) => (
 );
 
 export default ResponsiveText;
+*/

@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto usa LoadingSpinner em components/common/LoadingSpinner.jsx
+
+/*
 import React from 'react';
 import { cn } from '../../utils/design-system';
 
@@ -147,3 +151,4 @@ export const SkeletonLoader = ({
 };
 
 export default AnimatedSpinner;
+*/

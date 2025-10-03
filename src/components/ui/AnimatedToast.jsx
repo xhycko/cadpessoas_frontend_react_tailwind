@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto usa Toast em components/common/Toast.jsx
+
+/*
 import React, { useEffect, useState } from 'react';
 import { 
   CheckCircleIcon, 
@@ -185,3 +189,4 @@ export const ToastContainer = ({
 };
 
 export default AnimatedToast;
+*/

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { 
-  CheckIcon, 
-  XMarkIcon, 
-  UserIcon, 
-  EnvelopeIcon, 
-  PhoneIcon, 
+import {
+  CheckIcon,
+  XMarkIcon,
+  UserIcon,
+  EnvelopeIcon,
+  PhoneIcon,
   CalendarIcon,
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
@@ -12,10 +12,10 @@ import { GENEROS_OPCOES, criarPessoaVazia } from '../../models/Pessoa';
 import { validarPessoa } from '../../utils/validation';
 import { aplicarMascaraTelefone } from '../../utils/formatters';
 
-const PersonForm = ({ 
-  pessoa = null, 
-  onSubmit, 
-  onCancel, 
+const PersonForm = ({
+  pessoa = null,
+  onSubmit,
+  onCancel,
   loading = false,
   submitText = 'Salvar',
   title = 'Formulário de Pessoa'
@@ -42,7 +42,7 @@ const PersonForm = ({
       ...prev,
       [field]: value
     }));
-    
+
     // Marca o campo como tocado
     setTouched(prev => ({
       ...prev,
@@ -58,7 +58,7 @@ const PersonForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Marca todos os campos como tocados
     const allFields = ['nome', 'email', 'telefone', 'genero', 'dataNascimento'];
     const newTouched = {};
@@ -89,11 +89,11 @@ const PersonForm = ({
   };
 
   const isFormValid = () => {
-    return Object.keys(errors).length === 0 && 
-           formData.nome && 
-           formData.email && 
-           formData.genero && 
-           formData.dataNascimento;
+    return Object.keys(errors).length === 0 &&
+      formData.nome &&
+      formData.email &&
+      formData.genero &&
+      formData.dataNascimento;
   };
 
   return (
@@ -115,7 +115,7 @@ const PersonForm = ({
         {/* Card do formulário */}
         <div className="bg-white dark:bg-secondary-800 rounded-xl shadow-lg border border-secondary-200 dark:border-secondary-700 overflow-hidden">
           <div className="p-6 space-y-4">
-            
+
             {/* Grid 2 colunas para todos os campos */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Nome */}
@@ -135,11 +135,10 @@ const PersonForm = ({
                     onBlur={() => setTouched(prev => ({ ...prev, nome: true }))}
                     placeholder="Digite o nome"
                     disabled={loading}
-                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${
-                      isFieldInvalid('nome') 
-                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20' 
+                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${isFieldInvalid('nome')
+                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20'
                         : 'border-secondary-200 dark:border-secondary-600 focus:border-primary-500 focus:ring-primary-500/20 hover:border-secondary-300 dark:hover:border-secondary-500'
-                    }`}
+                      }`}
                   />
                   {formData.nome && !isFieldInvalid('nome') && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -171,11 +170,10 @@ const PersonForm = ({
                     onBlur={() => setTouched(prev => ({ ...prev, email: true }))}
                     placeholder="exemplo@email.com"
                     disabled={loading}
-                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${
-                      isFieldInvalid('email') 
-                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20' 
+                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${isFieldInvalid('email')
+                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20'
                         : 'border-secondary-200 dark:border-secondary-600 focus:border-primary-500 focus:ring-primary-500/20 hover:border-secondary-300 dark:hover:border-secondary-500'
-                    }`}
+                      }`}
                   />
                   {formData.email && !isFieldInvalid('email') && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -208,11 +206,10 @@ const PersonForm = ({
                     onBlur={() => setTouched(prev => ({ ...prev, telefone: true }))}
                     placeholder="(11) 99999-9999"
                     disabled={loading}
-                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${
-                      isFieldInvalid('telefone') 
-                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20' 
+                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${isFieldInvalid('telefone')
+                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20'
                         : 'border-secondary-200 dark:border-secondary-600 focus:border-primary-500 focus:ring-primary-500/20 hover:border-secondary-300 dark:hover:border-secondary-500'
-                    }`}
+                      }`}
                   />
                   {formData.telefone && !isFieldInvalid('telefone') && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -243,11 +240,10 @@ const PersonForm = ({
                 </label>
                 <div className="space-y-2">
                   {GENEROS_OPCOES.map((opcao) => (
-                    <label key={opcao.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-200 ${
-                      formData.genero === opcao.value
+                    <label key={opcao.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-200 ${formData.genero === opcao.value
                         ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
                         : 'border-secondary-200 dark:border-secondary-600 hover:border-secondary-300 dark:hover:border-secondary-500 bg-white dark:bg-secondary-900'
-                    }`}>
+                      }`}>
                       <input
                         type="radio"
                         name="genero"
@@ -258,20 +254,18 @@ const PersonForm = ({
                         disabled={loading}
                         className="sr-only"
                       />
-                      <div className={`w-4 h-4 rounded-full border-2 mr-2 flex items-center justify-center transition-all duration-200 ${
-                        formData.genero === opcao.value
+                      <div className={`w-4 h-4 rounded-full border-2 mr-2 flex items-center justify-center transition-all duration-200 ${formData.genero === opcao.value
                           ? 'border-primary-500 bg-primary-500'
                           : 'border-secondary-300 dark:border-secondary-600'
-                      }`}>
+                        }`}>
                         {formData.genero === opcao.value && (
                           <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
                         )}
                       </div>
-                      <span className={`text-sm font-medium ${
-                        formData.genero === opcao.value
+                      <span className={`text-sm font-medium ${formData.genero === opcao.value
                           ? 'text-primary-700 dark:text-primary-300'
                           : 'text-secondary-700 dark:text-secondary-300'
-                      }`}>
+                        }`}>
                         {opcao.label}
                       </span>
                     </label>
@@ -302,11 +296,10 @@ const PersonForm = ({
                     onBlur={() => setTouched(prev => ({ ...prev, dataNascimento: true }))}
                     disabled={loading}
                     max={new Date().toISOString().split('T')[0]}
-                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 focus:outline-none focus:ring-2 ${
-                      isFieldInvalid('dataNascimento') 
-                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20' 
+                    className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 focus:outline-none focus:ring-2 ${isFieldInvalid('dataNascimento')
+                        ? 'border-error-300 dark:border-error-600 focus:border-error-500 focus:ring-error-500/20'
                         : 'border-secondary-200 dark:border-secondary-600 focus:border-primary-500 focus:ring-primary-500/20 hover:border-secondary-300 dark:hover:border-secondary-500'
-                    }`}
+                      }`}
                   />
                   {formData.dataNascimento && !isFieldInvalid('dataNascimento') && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -379,11 +372,10 @@ const PersonForm = ({
               <button
                 type="submit"
                 disabled={loading || !isFormValid()}
-                className={`inline-flex items-center px-6 py-2 text-sm font-semibold text-white rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${
-                  isFormValid() && !loading
+                className={`inline-flex items-center px-6 py-2 text-sm font-semibold text-white rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed ${isFormValid() && !loading
                     ? 'bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 focus:ring-primary-500/20 shadow-md hover:shadow-lg'
                     : 'bg-secondary-400 dark:bg-secondary-600 cursor-not-allowed'
-                }`}
+                  }`}
               >
                 {loading ? (
                   <>

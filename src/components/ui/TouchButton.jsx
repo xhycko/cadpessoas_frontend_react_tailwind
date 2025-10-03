@@ -1,3 +1,7 @@
+// COMPONENTE NÃO UTILIZADO - Comentado para evitar imports desnecessários
+// O projeto usa classes CSS diretamente para botões (btn-primary, btn-secondary, etc.)
+
+/*
 import React from 'react';
 import { cn } from '../../utils/design-system';
 
@@ -61,3 +65,4 @@ const TouchButton = ({
 };
 
 export default TouchButton;
+*/
