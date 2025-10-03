@@ -1,0 +1,408 @@
+/* Design System - Classes Utilitárias Customizadas */
+
+/* Componentes de Layout */
+.container-app {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply max-w-2xl mx-auto px-4 sm:px-6;
+}
+
+.container-wide {
+  @apply max-w-full mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Componentes de Card */
+.card {
+  @apply bg-white dark:bg-secondary-800 rounded-lg shadow-card border border-secondary-200 dark:border-secondary-700;
+}
+
+.card-hover {
+  @apply card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+}
+
+.card-interactive {
+  @apply card-hover cursor-pointer;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-secondary-200 dark:border-secondary-700;
+}
+
+.card-body {
+  @apply px-6 py-4;
+}
+
+.card-footer {
+  @apply px-6 py-4 border-t border-secondary-200 dark:border-secondary-700 bg-secondary-50 dark:bg-secondary-900 rounded-b-lg;
+}
+
+/* Componentes de Botão */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 active:bg-primary-800;
+}
+
+.btn-secondary {
+  @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500 active:bg-secondary-800;
+}
+
+.btn-success {
+  @apply btn bg-success-600 text-white hover:bg-success-700 focus:ring-success-500 active:bg-success-800;
+}
+
+.btn-error {
+  @apply btn bg-error-600 text-white hover:bg-error-700 focus:ring-error-500 active:bg-error-800;
+}
+
+.btn-warning {
+  @apply btn bg-warning-600 text-white hover:bg-warning-700 focus:ring-warning-500 active:bg-warning-800;
+}
+
+.btn-outline {
+  @apply btn border-2 bg-transparent;
+}
+
+.btn-outline-primary {
+  @apply btn-outline border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500;
+}
+
+.btn-outline-secondary {
+  @apply btn-outline border-secondary-600 text-secondary-600 hover:bg-secondary-600 hover:text-white focus:ring-secondary-500;
+}
+
+.btn-ghost {
+  @apply btn bg-transparent hover:bg-secondary-100 dark:hover:bg-secondary-800 text-secondary-700 dark:text-secondary-300;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base;
+}
+
+.btn-xl {
+  @apply px-8 py-4 text-lg;
+}
+
+/* Componentes de Input */
+.input {
+  @apply block w-full px-3 py-2 border border-secondary-300 dark:border-secondary-600 rounded-md shadow-sm placeholder-secondary-400 dark:placeholder-secondary-500 bg-white dark:bg-secondary-800 text-secondary-900 dark:text-secondary-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200;
+}
+
+.input-error {
+  @apply input border-error-300 dark:border-error-600 focus:ring-error-500 focus:border-error-500;
+}
+
+.input-success {
+  @apply input border-success-300 dark:border-success-600 focus:ring-success-500 focus:border-success-500;
+}
+
+.input-group {
+  @apply space-y-1;
+}
+
+.input-label {
+  @apply block text-sm font-medium text-secondary-700 dark:text-secondary-300;
+}
+
+.input-help {
+  @apply text-xs text-secondary-500 dark:text-secondary-400;
+}
+
+.input-error-message {
+  @apply text-xs text-error-600 dark:text-error-400;
+}
+
+/* Componentes de Select */
+.select {
+  @apply input appearance-none bg-no-repeat bg-right bg-[length:16px_16px] pr-10;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Componentes de Badge */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+  @apply badge bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200;
+}
+
+.badge-secondary {
+  @apply badge bg-secondary-100 text-secondary-800 dark:bg-secondary-900 dark:text-secondary-200;
+}
+
+.badge-success {
+  @apply badge bg-success-100 text-success-800 dark:bg-success-900 dark:text-success-200;
+}
+
+.badge-error {
+  @apply badge bg-error-100 text-error-800 dark:bg-error-900 dark:text-error-200;
+}
+
+.badge-warning {
+  @apply badge bg-warning-100 text-warning-800 dark:bg-warning-900 dark:text-warning-200;
+}
+
+.badge-info {
+  @apply badge bg-info-100 text-info-800 dark:bg-info-900 dark:text-info-200;
+}
+
+/* Componentes de Alert */
+.alert {
+  @apply p-4 rounded-md border;
+}
+
+.alert-success {
+  @apply alert bg-success-50 border-success-200 text-success-800 dark:bg-success-900/20 dark:border-success-800 dark:text-success-200;
+}
+
+.alert-error {
+  @apply alert bg-error-50 border-error-200 text-error-800 dark:bg-error-900/20 dark:border-error-800 dark:text-error-200;
+}
+
+.alert-warning {
+  @apply alert bg-warning-50 border-warning-200 text-warning-800 dark:bg-warning-900/20 dark:border-warning-800 dark:text-warning-200;
+}
+
+.alert-info {
+  @apply alert bg-info-50 border-info-200 text-info-800 dark:bg-info-900/20 dark:border-info-800 dark:text-info-200;
+}
+
+/* Componentes de Loading */
+.spinner {
+  @apply animate-spin rounded-full border-2 border-secondary-200 border-t-primary-600;
+}
+
+.spinner-sm {
+  @apply spinner h-4 w-4;
+}
+
+.spinner-md {
+  @apply spinner h-6 w-6;
+}
+
+.spinner-lg {
+  @apply spinner h-8 w-8;
+}
+
+.spinner-xl {
+  @apply spinner h-12 w-12;
+}
+
+/* Componentes de Avatar */
+.avatar {
+  @apply inline-flex items-center justify-center rounded-full bg-secondary-500 text-white font-medium;
+}
+
+.avatar-sm {
+  @apply avatar h-8 w-8 text-sm;
+}
+
+.avatar-md {
+  @apply avatar h-10 w-10 text-base;
+}
+
+.avatar-lg {
+  @apply avatar h-12 w-12 text-lg;
+}
+
+.avatar-xl {
+  @apply avatar h-16 w-16 text-xl;
+}
+
+/* Componentes de Divider */
+.divider {
+  @apply border-t border-secondary-200 dark:border-secondary-700;
+}
+
+.divider-vertical {
+  @apply border-l border-secondary-200 dark:border-secondary-700;
+}
+
+/* Estados de Hover e Focus */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-secondary-800;
+}
+
+/* Utilitários de Texto */
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Utilitários de Layout Responsivo */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Utilitários de Scroll */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utilitários de Backdrop */
+.backdrop {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-40;
+}
+
+/* Utilitários de Transição */
+.transition-smooth {
+  @apply transition-all duration-300 ease-smooth;
+}
+
+.transition-bounce {
+  @apply transition-all duration-300 ease-bounce-in;
+}
+
+/* Media Queries Customizadas */
+@media (max-width: 640px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* Utilitários de Print */
+@media print {
+  .print-hidden {
+    display: none !important;
+  }
+  
+  .print-visible {
+    display: block !important;
+  }
+}/* Compone
+ntes de Tabela */
+.table {
+  @apply min-w-full divide-y divide-secondary-200 dark:divide-secondary-700;
+}
+
+.table-header {
+  @apply bg-secondary-50 dark:bg-secondary-800;
+}
+
+.table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-secondary-500 dark:text-secondary-400 uppercase tracking-wider;
+}
+
+.table-body {
+  @apply bg-white dark:bg-secondary-800 divide-y divide-secondary-200 dark:divide-secondary-700;
+}
+
+.table-row {
+  @apply hover:bg-secondary-50 dark:hover:bg-secondary-700 transition-colors;
+}
+
+.table-cell {
+  @apply px-6 py-4 whitespace-nowrap;
+}
+
+.table-responsive {
+  @apply overflow-x-auto;
+}
+
+/* Utilitários de Tabela Responsiva */
+.table-stack {
+  @apply block md:table;
+}
+
+.table-stack thead {
+  @apply hidden md:table-header-group;
+}
+
+.table-stack tbody {
+  @apply block md:table-row-group;
+}
+
+.table-stack tr {
+  @apply block md:table-row border border-secondary-200 dark:border-secondary-700 rounded-lg mb-4 md:mb-0 md:border-0 md:rounded-none;
+}
+
+.table-stack td {
+  @apply block md:table-cell px-4 py-2 md:px-6 md:py-4 text-right md:text-left;
+}
+
+.table-stack td:before {
+  content: attr(data-label) ": ";
+  @apply font-semibold text-secondary-700 dark:text-secondary-300 float-left md:hidden;
+}
+
+/* Componentes de Formulário Compacto */
+.form-compact {
+  @apply space-y-4;
+}
+
+.form-compact .form-group {
+  @apply space-y-1;
+}
+
+.form-compact .form-label {
+  @apply flex items-center text-sm font-semibold text-secondary-700 dark:text-secondary-300 mb-2;
+}
+
+.form-compact .form-input {
+  @apply w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2;
+}
+
+.form-compact .form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.form-compact .form-error {
+  @apply flex items-center mt-1 text-xs text-error-600 dark:text-error-400;
+}
+
+.form-compact .form-help {
+  @apply mt-1 text-xs text-secondary-500 dark:text-secondary-400;
+}

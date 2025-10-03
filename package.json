@@ -1,0 +1,53 @@
+{
+  "name": "crud-react-mobile",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode production",
+    "build:analyze": "vite build --mode production && vite-bundle-analyzer dist",
+    "build:preview": "npm run build && npm run preview",
+    "build:stats": "vite build --mode analyze",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "preview:network": "vite preview --host",
+    "clean": "rmdir /s /q dist && rmdir /s /q node_modules\\.vite",
+    "clean:unix": "rm -rf dist node_modules/.vite",
+    "typecheck": "tsc --noEmit",
+    "optimize": "npm run clean && npm ci && npm run build",
+    "deploy:netlify": "npm run optimize && netlify deploy --prod --dir=dist",
+    "deploy:vercel": "npm run optimize && vercel --prod"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "axios": "^1.12.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.1.1",
+    "esbuild": "^0.25.10",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.44.0",
+    "vite": "npm:rolldown-vite@7.1.14",
+    "vite-bundle-analyzer": "^1.2.3",
+    "vite-plugin-compression": "^0.5.1",
+    "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.14"
+  }
+}
