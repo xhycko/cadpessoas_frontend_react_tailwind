@@ -1,37 +1,38 @@
-# CRUD React Mobile
+# CRUD React Tailwind
 
-Projeto educacional demonstrando as vantagens da arquitetura REST sobre aplicações monolíticas através de uma interface React mobile-first.
+Projeto educacional demonstrando arquitetura REST com interface React e Tailwind CSS.
 
-## 🎯 Objetivo
+## Objetivo
 
-Este projeto foi criado para demonstrar na prática como uma aplicação React pode consumir uma API REST de forma desacoplada, evidenciando os benefícios da separação entre frontend e backend.
+Demonstrar como uma aplicação React consome uma API REST de forma desacoplada.
 
-## 🚀 Tecnologias
+## Tecnologias
 
-- **React 18** - Framework JavaScript
+- **React 19** - Framework JavaScript
 - **Vite** - Build tool e dev server
 - **React Router DOM** - Roteamento
-- **Bootstrap 5** - Framework CSS
-- **React Bootstrap** - Componentes Bootstrap para React
+- **Tailwind CSS** - Framework CSS
+- **Heroicons** - Ícones
 - **Axios** - Cliente HTTP para API
-- **React Icons** - Ícones
 
-## 📱 Características
+## Características
 
 - **Mobile-First**: Interface otimizada para dispositivos móveis
 - **Responsivo**: Adapta-se a diferentes tamanhos de tela
-- **Design Moderno**: Sistema de cores inspirado em sites populares
+- **Design Moderno**: Sistema de cores com tema escuro
 - **Arquitetura REST**: Consome API REST existente
 - **Componentização**: Componentes reutilizáveis e modulares
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
 ├── components/
 │   ├── common/          # Componentes compartilhados
 │   ├── forms/           # Componentes de formulário
-│   └── layout/          # Componentes de layout
+│   ├── layout/          # Componentes de layout
+│   └── ui/              # Componentes de interface
+├── contexts/            # Contextos React
 ├── pages/               # Páginas da aplicação
 ├── services/            # Serviços de API
 ├── hooks/               # Custom hooks
@@ -40,23 +41,21 @@ src/
 └── styles/              # Estilos globais
 ```
 
-## 🔧 Configuração
+## Configuração
 
 ### Pré-requisitos
 
 - Node.js 18+
-- npm ou yarn
+- npm
 - API REST rodando em `http://localhost:8080`
 
 ### Instalação
 
 1. Clone o repositório
 2. Instale as dependências:
-
    ```bash
    npm install
    ```
-
 3. Configure a URL da API no arquivo `.env`:
    ```
    VITE_API_BASE_URL=http://localhost:8080/api
@@ -68,7 +67,7 @@ src/
 npm run dev
 ```
 
-A aplicação estará disponível em `http://localhost:5173`
+Aplicação disponível em `http://localhost:5173`
 
 ### Build para Produção
 
@@ -76,40 +75,42 @@ A aplicação estará disponível em `http://localhost:5173`
 npm run build
 ```
 
-## Funcionalidades Implementadas
+## Funcionalidades
 
 ### Concluído
 
-- [x] Estrutura base do projeto React com Vite
-- [x] Sistema de roteamento com React Router
-- [x] Layout responsivo com header e footer (100% da resolução)
+- [x] Estrutura base React com Vite
+- [x] Sistema de roteamento React Router
+- [x] Layout responsivo com header e footer
 - [x] Sistema de cores e design moderno
 - [x] Componentes compartilhados (Loading, Error, Toast, Dialog)
 - [x] Serviço de API com tratamento de erros
-- [x] Modelos de dados e validação (incluindo telefone)
+- [x] Modelos de dados e validação
 - [x] Página inicial com apresentação do projeto
 - [x] Componentes de pessoa (PersonCard e PersonForm)
 - [x] Páginas CRUD completas (Listar, Adicionar, Editar)
 - [x] Página de monitoramento da API com auto-refresh
 - [x] Integração completa com a API REST
 - [x] Cards em formato de lista vertical compacta
-- [x] Formulários com campos maiores e mais confortáveis
-- [x] CSS refatorado sem duplicações e `!important` excessivo
+- [x] Formulários com campos maiores e confortáveis
+- [x] Tailwind CSS implementado
+- [x] Context API para tema
+- [x] Heroicons para ícones
 
 ## Design System
 
-O projeto utiliza um sistema de design moderno com:
+Sistema de design moderno com:
 
 - **Cores**: Paleta inspirada no Discord/GitHub
 - **Tipografia**: Fonte Inter para melhor legibilidade
-- **Componentes**: Bootstrap customizado com tema escuro
+- **Componentes**: Tailwind CSS customizado com tema escuro
 - **Animações**: Transições suaves e micro-interações
-- **Layout**: 100% da resolução, lista vertical compacta
-- **Formulários**: Campos grandes e confortáveis para digitação
+- **Layout**: Lista vertical compacta
+- **Formulários**: Campos grandes e confortáveis
 
-## 🔗 API REST
+## API REST
 
-A aplicação consome uma API REST com os seguintes endpoints:
+Endpoints consumidos:
 
 - `GET /api/pessoas` - Listar pessoas
 - `GET /api/pessoas/{id}` - Buscar pessoa por ID
@@ -120,12 +121,9 @@ A aplicação consome uma API REST com os seguintes endpoints:
 
 ## Vantagens da Arquitetura REST
 
-Este projeto demonstra:
-
 1. **Desacoplamento**: Frontend e backend independentes
-2. **Reutilização**: API pode servir múltiplos clientes
+2. **Reutilização**: API serve múltiplos clientes
 3. **Escalabilidade**: Escale cada camada separadamente
 4. **Flexibilidade**: Use diferentes tecnologias
 5. **Testabilidade**: Teste cada camada isoladamente
-6. **Manutenibilidade**: Código mais organizado e modular
-
+6. **Manutenibilidade**: Código organizado e modular

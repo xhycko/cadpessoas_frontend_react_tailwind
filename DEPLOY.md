@@ -39,15 +39,15 @@ npm run deploy:vercel
 
 ### Build
 - Tailwind CSS purge
-- Code splitting por funcionalidade
+- Code splitting
 - Tree shaking
 - Minificação HTML/CSS/JS
 - Compressão gzip/brotli
-- Cache busting com hash
+- Cache busting
 - Source maps
 
 ### Performance
-- Lazy loading de páginas
+- Lazy loading
 - Bundle analysis
 - Chunks estratégicos
 - CSS code splitting
@@ -71,7 +71,8 @@ npm run deploy:vercel
 - Total: < 500KB
 - React: ~130KB
 - Router: ~25KB
-- Icons: ~15KB
+- Tailwind: ~20KB
+- Heroicons: ~15KB
 - App: ~50KB
 
 ### Lighthouse Target
