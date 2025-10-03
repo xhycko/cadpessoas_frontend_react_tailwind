@@ -107,7 +107,7 @@ const PersonForm = ({
           {title}
         </h2>
         <p className="text-sm text-secondary-600 dark:text-secondary-400">
-          Preencha os campos abaixo
+          Preencha os campos
         </p>
       </div>
 
@@ -124,7 +124,7 @@ const PersonForm = ({
                   <div className="flex items-center justify-center w-6 h-6 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-2">
                     <UserIcon className="h-3 w-3 text-primary-600 dark:text-primary-400" />
                   </div>
-                  Nome completo
+                  Nome
                   <span className="text-error-500 ml-1">*</span>
                 </label>
                 <div className="relative">
@@ -133,7 +133,7 @@ const PersonForm = ({
                     value={formData.nome}
                     onChange={(e) => handleInputChange('nome', e.target.value)}
                     onBlur={() => setTouched(prev => ({ ...prev, nome: true }))}
-                    placeholder="Digite o nome completo"
+                    placeholder="Digite o nome"
                     disabled={loading}
                     className={`w-full px-3 py-3 text-sm border-2 rounded-lg transition-all duration-200 bg-white dark:bg-secondary-900 text-secondary-900 dark:text-secondary-100 placeholder-secondary-400 dark:placeholder-secondary-500 focus:outline-none focus:ring-2 ${
                       isFieldInvalid('nome') 
@@ -291,7 +291,7 @@ const PersonForm = ({
                   <div className="flex items-center justify-center w-6 h-6 bg-info-100 dark:bg-info-900/30 rounded-lg mr-2">
                     <CalendarIcon className="h-3 w-3 text-info-600 dark:text-info-400" />
                   </div>
-                  Data de Nascimento
+                  Nascimento
                   <span className="text-error-500 ml-1">*</span>
                 </label>
                 <div className="relative">
@@ -334,7 +334,7 @@ const PersonForm = ({
               </div>
               <div className="flex-1">
                 <h3 className="text-sm font-semibold text-error-800 dark:text-error-200 mb-2">
-                  Corrija os seguintes campos:
+                  Corrija os campos:
                 </h3>
                 <div className="space-y-1">
                   {Object.entries(errors).map(([field, error]) => (
@@ -359,7 +359,7 @@ const PersonForm = ({
               <div className="flex items-center space-x-2">
                 <div className={`w-2 h-2 rounded-full ${isFormValid() ? 'bg-success-500' : 'bg-secondary-300 dark:bg-secondary-600'}`}></div>
                 <span className="font-medium">
-                  {isFormValid() ? 'Formulário válido' : 'Preencha os campos obrigatórios'}
+                  {isFormValid() ? 'Formulário válido' : 'Preencha campos obrigatórios'}
                 </span>
               </div>
             </div>

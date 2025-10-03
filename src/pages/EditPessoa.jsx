@@ -68,7 +68,7 @@ const EditPessoa = () => {
     <div className="container mx-auto px-4 py-6">
       <PageHeader 
         title="Editar Pessoa"
-        subtitle={pessoa ? `Editando dados de ${pessoa.nome}` : 'Carregando...'}
+        subtitle={pessoa ? `Editando ${pessoa.nome}` : 'Carregando...'}
         icon={PencilIcon}
         backLink={{ component: Link, to: '/pessoas', icon: ArrowLeftIcon, text: 'Voltar' }}
       />
@@ -79,7 +79,7 @@ const EditPessoa = () => {
             onSubmit={handleSubmit}
             onCancel={() => navigate('/pessoas')}
             loading={saving}
-            submitText="Salvar Alterações"
+            submitText="Salvar"
             title={`Editando: ${pessoa.nome}`}
           />
         )}

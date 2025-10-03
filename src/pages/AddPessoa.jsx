@@ -27,8 +27,8 @@ const AddPessoa = () => {
   return (
     <div className="container mx-auto px-4 py-6">
       <PageHeader 
-        title="Adicionar Nova Pessoa"
-        subtitle="Preencha os dados abaixo para cadastrar uma nova pessoa"
+        title="Adicionar Pessoa"
+        subtitle="Preencha os dados para cadastrar"
         icon={UserPlusIcon}
         backLink={{ component: Link, to: '/pessoas', icon: ArrowLeftIcon, text: 'Voltar' }}
       />
@@ -37,8 +37,8 @@ const AddPessoa = () => {
           onSubmit={handleSubmit}
           onCancel={() => navigate('/pessoas')}
           loading={loading}
-          submitText="Adicionar Pessoa"
-          title="Dados da Nova Pessoa"
+          submitText="Adicionar"
+          title="Dados da Pessoa"
         />
       </div>
     </div>
