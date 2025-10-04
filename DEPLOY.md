@@ -1,7 +1,6 @@
 # Deploy - CRUD de Pessoas
 
 ## Build
-
 ```bash
 npm ci
 npm run build
@@ -14,17 +13,14 @@ npm run build:analyze  # opcional
 1. Conectar repositório
 2. Build command: `npm run build`
 3. Publish directory: `dist`
-4. Configurações via `netlify.toml`
 
 ### Vercel
 1. Conectar repositório
 2. Framework: Vite
 3. Build command: `npm run build`
 4. Output directory: `dist`
-5. Configurações via `vercel.json`
 
 ## Deploy Manual
-
 ```bash
 # Netlify
 npm install -g netlify-cli
@@ -43,27 +39,22 @@ npm run deploy:vercel
 - Tree shaking
 - Minificação HTML/CSS/JS
 - Compressão gzip/brotli
-- Cache busting
-- Source maps
 
 ### Performance
 - Lazy loading
 - Bundle analysis
 - Chunks estratégicos
 - CSS code splitting
-- Target ES2015+
 
 ### Cache
 - Assets estáticos: 1 ano
 - HTML: 1 hora
-- Service worker: sem cache
 
 ### Security Headers
 - X-Frame-Options: DENY
 - X-XSS-Protection
 - X-Content-Type-Options
 - Referrer-Policy
-- Permissions-Policy
 
 ## Métricas
 
@@ -72,19 +63,16 @@ npm run deploy:vercel
 - React: ~130KB
 - Router: ~25KB
 - Tailwind: ~20KB
-- Heroicons: ~15KB
 - App: ~50KB
 
 ### Lighthouse Target
 - Performance: 90+
 - Accessibility: 95+
 - Best Practices: 90+
-- SEO: 85+
 
 ## Configuração API
 
 ### Variáveis
-`.env.production`:
 ```env
 VITE_API_URL=https://sua-api.herokuapp.com/api
 ```
@@ -98,7 +86,6 @@ app.use(cors({
 ```
 
 ## Docker
-
 ```dockerfile
 FROM node:18-alpine as builder
 WORKDIR /app
@@ -109,7 +96,6 @@ RUN npm run build
 
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
@@ -126,18 +112,10 @@ CMD ["nginx", "-g", "daemon off;"]
 2. Verificar imports
 3. Lazy load componentes
 
-### Performance
-1. Lighthouse audit
-2. Otimizar imagens
-3. Revisar chunks
-
 ## Checklist
-
 - [ ] Build sem erros
 - [ ] Bundle < 500KB
 - [ ] Lighthouse > 90
 - [ ] CORS configurado
-- [ ] Variáveis definidas
 - [ ] Headers segurança
 - [ ] Cache configurado
-- [ ] Compressão ativa

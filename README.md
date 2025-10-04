@@ -3,124 +3,104 @@
 Projeto educacional demonstrando arquitetura REST com interface React e Tailwind CSS.
 
 ## Objetivo
-
-Demonstrar como uma aplicação React consome uma API REST de forma desacoplada.
+Demonstrar como aplicação React consome API REST de forma desacoplada.
 
 ## Tecnologias
-
 - **React 19** - Framework JavaScript
-- **Vite** - Build tool e dev server
+- **Vite** - Build tool
 - **React Router DOM** - Roteamento
 - **Tailwind CSS** - Framework CSS
 - **Heroicons** - Ícones
-- **Axios** - Cliente HTTP para API
+- **Axios** - Cliente HTTP
 
 ## Características
-
-- **Mobile-First**: Interface otimizada para dispositivos móveis
-- **Responsivo**: Adapta-se a diferentes tamanhos de tela
-- **Design Moderno**: Sistema de cores com tema escuro
+- **Mobile-First**: Interface otimizada para móveis
+- **Responsivo**: Adapta-se a diferentes telas
+- **Design Moderno**: Sistema de cores tema escuro
 - **Arquitetura REST**: Consome API REST existente
-- **Componentização**: Componentes reutilizáveis e modulares
+- **Componentização**: Componentes reutilizáveis
 
-## Estrutura do Projeto
-
+## Estrutura
 ```
 src/
 ├── components/
-│   ├── common/          # Componentes compartilhados
-│   ├── forms/           # Componentes de formulário
-│   ├── layout/          # Componentes de layout
-│   └── ui/              # Componentes de interface
+│   ├── common/          # Compartilhados
+│   ├── forms/           # Formulários
+│   ├── layout/          # Layout
+│   └── ui/              # Interface
 ├── contexts/            # Contextos React
-├── pages/               # Páginas da aplicação
-├── services/            # Serviços de API
+├── pages/               # Páginas
+├── services/            # API
 ├── hooks/               # Custom hooks
 ├── utils/               # Utilitários
-├── models/              # Modelos de dados
-└── styles/              # Estilos globais
+├── models/              # Modelos
+└── styles/              # Estilos
 ```
 
 ## Configuração
 
 ### Pré-requisitos
-
 - Node.js 18+
 - npm
-- API REST rodando em `http://localhost:8080`
+- API REST em `http://localhost:8080`
 
 ### Instalação
+```bash
+npm install
+```
 
-1. Clone o repositório
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Configure a URL da API no arquivo `.env`:
-   ```
-   VITE_API_BASE_URL=http://localhost:8080/api
-   ```
+### Configurar API
+```
+VITE_API_BASE_URL=http://localhost:8080/api
+```
 
-### Executar em Desenvolvimento
-
+### Executar
 ```bash
 npm run dev
 ```
+Acesso: `http://localhost:5173`
 
-Aplicação disponível em `http://localhost:5173`
-
-### Build para Produção
-
+### Build
 ```bash
 npm run build
 ```
 
 ## Funcionalidades
-
-### Concluído
-
-- [x] Estrutura base React com Vite
-- [x] Sistema de roteamento React Router
-- [x] Layout responsivo com header e footer
-- [x] Sistema de cores e design moderno
+- [x] Estrutura React com Vite
+- [x] Roteamento React Router
+- [x] Layout responsivo
+- [x] Sistema de cores moderno
 - [x] Componentes compartilhados (Loading, Error, Toast, Dialog)
-- [x] Serviço de API com tratamento de erros
+- [x] Serviço API com tratamento de erros
 - [x] Modelos de dados e validação
-- [x] Página inicial com apresentação do projeto
-- [x] Componentes de pessoa (PersonCard e PersonForm)
-- [x] Páginas CRUD completas (Listar, Adicionar, Editar)
-- [x] Página de monitoramento da API com auto-refresh
-- [x] Integração completa com a API REST
-- [x] Cards em formato de lista vertical compacta
-- [x] Formulários com campos maiores e confortáveis
+- [x] Página inicial
+- [x] Componentes pessoa (PersonCard, PersonForm)
+- [x] Páginas CRUD completas
+- [x] Monitoramento API com auto-refresh
+- [x] Integração completa API REST
+- [x] Cards em lista vertical compacta
+- [x] Formulários com campos maiores
 - [x] Tailwind CSS implementado
 - [x] Context API para tema
 - [x] Heroicons para ícones
 
 ## Design System
-
-Sistema de design moderno com:
-
-- **Cores**: Paleta inspirada no Discord/GitHub
-- **Tipografia**: Fonte Inter para melhor legibilidade
-- **Componentes**: Tailwind CSS customizado com tema escuro
-- **Animações**: Transições suaves e micro-interações
+- **Cores**: Paleta Discord/GitHub
+- **Tipografia**: Fonte Inter
+- **Componentes**: Tailwind CSS tema escuro
+- **Animações**: Transições suaves
 - **Layout**: Lista vertical compacta
 - **Formulários**: Campos grandes e confortáveis
 
 ## API REST
-
-Endpoints consumidos:
-
 - `GET /api/pessoas` - Listar pessoas
-- `GET /api/pessoas/{id}` - Buscar pessoa por ID
+- `GET /api/pessoas/{id}` - Buscar por ID
 - `POST /api/pessoas` - Criar pessoa
 - `PUT /api/pessoas/{id}` - Atualizar pessoa
 - `DELETE /api/pessoas/{id}` - Remover pessoa
 - `GET /api/health` - Status da API
 
-## Vantagens da Arquitetura REST
-
+## Vantagens Arquitetura REST
 1. **Desacoplamento**: Frontend e backend independentes
 2. **Reutilização**: API serve múltiplos clientes
 3. **Escalabilidade**: Escale cada camada separadamente
