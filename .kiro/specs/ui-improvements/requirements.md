@@ -1,35 +1,35 @@
-# Requirements
+# Requisitos
 
 ## Formulários Compactos
 
-**User Story:** Formulários mais compactos para melhor aproveitamento do espaço.
+**História:** Como usuário, quero formulários mais compactos, para melhor aproveitamento do espaço.
 
-#### Acceptance Criteria
+#### Critérios de Aceitação
 
-1. WHEN usuário acessa formulário THEN sistema SHALL apresentar campos compactos com menor espaçamento
-2. WHEN usuário visualiza formulário THEN sistema SHALL organizar campos em layout denso
-3. WHEN usuário interage com campos THEN sistema SHALL manter validação e feedback existentes
-4. WHEN usuário usa mobile THEN sistema SHALL manter responsividade
+1. QUANDO usuário acessa formulário ENTÃO sistema DEVE apresentar campos compactos com menor espaçamento
+2. QUANDO usuário visualiza formulário ENTÃO sistema DEVE organizar campos em layout denso
+3. QUANDO usuário interage com campos ENTÃO sistema DEVE manter validação e feedback existentes
+4. QUANDO usuário usa mobile ENTÃO sistema DEVE manter responsividade
 
 ## Listagem em Tabela
 
-**User Story:** Lista de pessoas em formato tabela horizontal para melhor comparação.
+**História:** Como usuário, quero lista de pessoas em formato tabela horizontal, para melhor comparação.
 
-#### Acceptance Criteria
+#### Critérios de Aceitação
 
-1. WHEN usuário acessa listagem THEN sistema SHALL apresentar dados em tabela horizontal
-2. WHEN usuário visualiza tabela THEN sistema SHALL exibir colunas: nome, email, telefone, gênero, data nascimento, ações
-3. WHEN usuário interage com tabela THEN sistema SHALL manter funcionalidades editar/excluir
-4. WHEN usuário usa mobile THEN sistema SHALL adaptar layout para telas menores
-5. WHEN tabela tem muitos registros THEN sistema SHALL manter performance
+1. QUANDO usuário acessa listagem ENTÃO sistema DEVE apresentar dados em tabela horizontal
+2. QUANDO usuário visualiza tabela ENTÃO sistema DEVE exibir colunas: nome, email, telefone, gênero, data nascimento, ações
+3. QUANDO usuário interage com tabela ENTÃO sistema DEVE manter funcionalidades editar/excluir
+4. QUANDO usuário usa mobile ENTÃO sistema DEVE adaptar layout para telas menores
+5. QUANDO tabela tem muitos registros ENTÃO sistema DEVE manter performance
 
 ## Consistência Visual
 
-**User Story:** Melhorias mantendo consistência do design system.
+**História:** Como desenvolvedor, quero melhorias mantendo consistência do design system, para preservar qualidade visual.
 
-#### Acceptance Criteria
+#### Critérios de Aceitação
 
-1. WHEN melhorias implementadas THEN sistema SHALL manter design system existente
-2. WHEN usuário navega THEN sistema SHALL manter transições e consistência visual
-3. WHEN usuário interage THEN sistema SHALL manter estados visuais (hover, focus, loading)
-4. WHEN usuário usa modo escuro THEN sistema SHALL manter suporte completo
+1. QUANDO melhorias implementadas ENTÃO sistema DEVE manter design system existente
+2. QUANDO usuário navega ENTÃO sistema DEVE manter transições e consistência visual
+3. QUANDO usuário interage ENTÃO sistema DEVE manter estados visuais (hover, focus, loading)
+4. QUANDO usuário usa modo escuro ENTÃO sistema DEVE manter suporte completo

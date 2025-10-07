@@ -1,10 +1,10 @@
 # Design
 
-## Overview
+## Visão Geral
 
 Redesign da interface para formulários compactos e listagem em tabela horizontal, mantendo o design system existente.
 
-## Architecture
+## Arquitetura
 
 ### Componentes Afetados
 - `PersonForm.jsx` - Formulário compacto
@@ -16,7 +16,7 @@ Redesign da interface para formulários compactos e listagem em tabela horizonta
 - Usar espaçamentos menores (py-2, py-3 vs py-4, py-8)
 - Preservar cores e tipografia
 
-## Components and Interfaces
+## Componentes e Interfaces
 
 ### PersonForm Compacto
 ```jsx
@@ -44,17 +44,17 @@ Redesign da interface para formulários compactos e listagem em tabela horizonta
 // Mobile: cards empilhados horizontalmente
 ```
 
-## Data Models
+## Modelos de Dados
 
 Sem alterações nos modelos existentes.
 
-## Error Handling
+## Tratamento de Erros
 
 Manter tratamento de erros existente:
 - Validação em tempo real
 - Estados de loading
 - Mensagens de erro
 
-## Testing Strategy
+## Estratégia de Testes
 
 - Testes visuais de responsividade
